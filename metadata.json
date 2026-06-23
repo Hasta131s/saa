@@ -1,0 +1,6 @@
+{
+  "name": "KAYRASQL SYSTEM",
+  "description": "Professional Account Validation and Checker tool",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

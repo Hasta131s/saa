@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Cyber Shield Outer Rounded Tech Frame -->
+    <path
+        android:pathData="M 24,24 A 6,6 0 0 1 30,18 h 48 a 6,6 0 0 1 6,6 v 48 a 6,6 0 0 1 -6,6 L 30,78 A 6,6 0 0 1 24,72 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:fillColor="#111111" />
+
+    <!-- Corner Tech Pins -->
+    <path
+        android:pathData="M 20,20 L 25,20 M 20,20 L 20,25 M 88,20 L 83,20 M 88,20 L 88,25 M 20,88 L 25,88 M 20,88 L 20,83 M 88,88 L 83,88 M 88,88 L 88,83"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5" />
+
+    <!-- Center Stylized Cryptographic Letter "K" -->
+    <!-- Stem -->
+    <path
+        android:pathData="M 40,30 h 8 v 32 h -8 Z"
+        android:fillColor="#FFFFFF" />
+    <!-- Diagonal Up -->
+    <path
+        android:pathData="M 48,46 L 62,30 h 10 L 56,46 Z"
+        android:fillColor="#FFFFFF" />
+    <!-- Diagonal Down -->
+    <path
+        android:pathData="M 48,46 L 64,62 h 10 L 56,46 Z"
+        android:fillColor="#FFFFFF" />
+        
+</vector>
