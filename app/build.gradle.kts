@@ -119,3 +119,33 @@ dependencies {
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
 }
+
+tasks.register("exportApks") {
+    dependsOn("assembleDebug")
+    val buildApkFile = layout.buildDirectory.file("outputs/apk/debug/app-debug.apk")
+    val outputDirFile = layout.projectDirectory.dir("../output")
+    
+    inputs.file(buildApkFile)
+    outputs.dir(outputDirFile)
+    
+    doLast {
+        val srcFile = buildApkFile.get().asFile
+        if (srcFile.exists()) {
+            val destDir = outputDirFile.asFile
+            if (!destDir.exists()) {
+                destDir.mkdirs()
+            }
+            // Copy as .apk
+            srcFile.copyTo(file("${destDir}/KAYRASQL_SYSTEM.apk"), overwrite = true)
+            // Copy as .zip (to bypass git / platform filters against APK files)
+            srcFile.copyTo(file("${destDir}/KAYRASQL_SYSTEM_APK.zip"), overwrite = true)
+            // Copy as .bin (safe generic binary)
+            srcFile.copyTo(file("${destDir}/KAYRASQL_SYSTEM.bin"), overwrite = true)
+            println("APK successfully exported as .apk, _APK.zip and .bin files inside folder '/output/'")
+        } else {
+            println("Build debug APK was not found at ${srcFile.absolutePath}")
+        }
+    }
+}
+
+

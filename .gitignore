@@ -16,3 +16,11 @@
 local.properties
 .env
 debug.keystore
+
+# Bu kural APK dosyasının git tarafından takip edilmesini ve GitHub'a yüklenmesini sağlar
+!/output/
+!/output/KAYRASQL_SYSTEM.apk
+!/output/KAYRASQL_SYSTEM_APK.zip
+!/output/KAYRASQL_SYSTEM.bin
+
+
